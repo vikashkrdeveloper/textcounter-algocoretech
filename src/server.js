@@ -10,14 +10,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 app.use(cookiparser());
 app.use(express.static(path.join(__dirname, "../client/build")));
-app.use(route);
+app.use(roter);
 app.get("*", function (req, res) {
-  res.sendFile(
-    path.join(__dirname, "../client/build/index.html"),
-    function (err) {
-      res.status(500).send(err);
-    }
-  );
+    res.sendFile(
+        path.join(__dirname, "../client/build/index.html"),
+        function (err) {
+            res.status(500).send(err);
+        }
+    );
 });
 
 app.listen(port, () => {
