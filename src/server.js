@@ -9,8 +9,8 @@ const path = require('path');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 app.use(cookiparser());
-app.use(roter);
 app.use(express.static(path.join(__dirname, '../client/build')))
+app.use(roter);
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname,'../client/build/index.html'));
