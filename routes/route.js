@@ -13,8 +13,8 @@ route.get('/',homepagecontrollers);
 route.get('/userauth',userauthmiddleware,userauthcontrollers);
 route.get('/userdata',userdatamiddleware,userdatacontrollers);
 route.get('/logout',logoutcontrollers)
-route.post('/user/register',registercontrollers);
-route.post('/user/login',logincontrollers);
+route.post('/register',registercontrollers);
+route.post('/login',logincontrollers);
 
 route.all('*',pagenotfoundcontrollers)
 module.exports=route;
